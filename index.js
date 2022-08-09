@@ -1,28 +1,28 @@
 async function fetchText() {
-    let response = await fetch('https://jsonmock.hackerrank.com/api/articles?page=1');
+    let response = await fetch('https://jsonmock.hackerrank.com/api/articles?page=1'); //fecthing data
     let data = await response.json();
 
-    let daata = data.data;
-    daata.sort(function (a, b) {
+    let newData = data.data;
+    newData.sort(function (a, b) {
         return b.num_comments - a.num_comments
     })
-    showData(daata)
+    showData(newData)
 }
 
 async function latestComments() {
-    let response = await fetch('https://jsonmock.hackerrank.com/api/articles?page=1');
+    let response = await fetch('https://jsonmock.hackerrank.com/api/articles?page=1'); //fecthing data
     let data = await response.json();
 
 
-    let daata = data.data;
-    daata.sort(function (a, b) {
+    let newData = data.data;
+    newData.sort(function (a, b) {
         return b.created_at - a.created_at
     })
-    showData(daata)
+    showData(newData)
 }
 
 
-let A = document.getElementById("container")
+let Container = document.getElementById("container")  // displaying all data
 
 function showData(e) {
     e.map(function (element) {
@@ -69,18 +69,18 @@ function showData(e) {
         let maind = document.createElement("div")
 
         maind.append(d, f, g)
-        A.append(maind)
+        Container.append(maind)
     });
 }
 
 
 
-
+// displaying single data
 function singlepage(e) {
     console.log(e)
     let a = document.getElementById("container");
     a.innerHTML = "";
-    let d = document.createElement("div")
+    let div1 = document.createElement("div")
 
     let title = document.createElement("h3")
     title.textContent = e.title
@@ -92,8 +92,8 @@ function singlepage(e) {
     auth.textContent = e.author
 
 
-    d.append(title, image, auth)
+    div1.append(title, image, auth)
 
-    a.append(d)
+    a.append(div1)
 
 }

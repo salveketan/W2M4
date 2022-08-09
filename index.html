@@ -10,7 +10,7 @@
         body {
             background-color: aquamarine;
         }
-
+        
         #container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -26,9 +26,6 @@
             padding: 10px;
         }
 
-        a {
-            color: blue;
-        }
 
         #first {
             justify-content: space-around;
@@ -39,13 +36,17 @@
 
         }
 
-        #btncontainer {
+        #header {
             display: flex;
             justify-content: space-around;
             height: 60px;
             margin: 4px;
             background-color: rgb(23, 150, 150);
             padding: 10px;
+        }
+
+        a {
+            color: blue;
         }
 
         button {
@@ -64,7 +65,7 @@
 </head>
 
 <body>
-    <div id="btncontainer">
+    <div id="header">
         <button onclick="fetchText()">Top 10 Comments</button>
         <button onclick="latestComments()">Latest 10 Comments</button>
     </div>

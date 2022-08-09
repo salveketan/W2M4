@@ -77,7 +77,7 @@ function showData(e) {
 
 // displaying single data
 function singlepage(e) {
-    console.log(e)
+    // console.log(e)
     let a = document.getElementById("container");
     a.innerHTML = "";
     let div1 = document.createElement("div")

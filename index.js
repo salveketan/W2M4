@@ -76,11 +76,24 @@ function showData(e) {
 
 
 
+function singlepage(e) {
+    console.log(e)
+    let a = document.getElementById("container");
+    a.innerHTML = "";
+    let d = document.createElement("div")
 
-// function singlepage(e) {
+    let title = document.createElement("h3")
+    title.textContent = e.title
 
-//     let D =
+    let image = document.createElement("img")
+    image.src = "https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909__340.png"
+
+    let auth = document.createElement("h3")
+    auth.textContent = e.author
 
 
+    d.append(title, image, auth)
 
-// }
+    a.append(d)
+
+}
